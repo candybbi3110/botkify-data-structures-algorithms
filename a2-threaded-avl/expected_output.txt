@@ -1,0 +1,24 @@
+=== TC1: Basic AVL Insertion & Traversal ===
+Tree size: 6
+Ascending keys: 20 30 35 40 50 70 
+--------------------
+=== TC2: AVL Deletion (Node with 2 children) ===
+Removed 30? Yes
+Ascending keys after erase: 20 40 50 60 70 80 
+--------------------
+=== TC3: Playlist Add & Get (Alphabetical Order) ===
+Playlist size: 4
+0: Song[id=2, title="Blinding Lights", artist="The Weeknd", album="After Hours", duration=200, score=4, url="url2", play_count=0]
+1: Song[id=4, title="Blinding Lights", artist="Cover Artist", album="Cover Album", duration=190, score=3, url="url4", play_count=0]
+2: Song[id=3, title="Levitating", artist="Dua Lipa", album="Future Nostalgia", duration=203, score=5, url="url3", play_count=0]
+3: Song[id=1, title="Shape of You", artist="Ed Sheeran", album="Divide", duration=233, score=5, url="url1", play_count=0]
+--------------------
+=== TC4: Playlist Continuous Playback ===
+Playing Next: Song[id=2, title="Blinding Lights", artist="The Weeknd", album="-", duration=200, score=4, url="-", play_count=0]
+Playing Next: Song[id=3, title="Levitating", artist="Dua Lipa", album="-", duration=203, score=5, url="-", play_count=0]
+Playing Prev: Song[id=2, title="Blinding Lights", artist="The Weeknd", album="-", duration=200, score=4, url="-", play_count=0]
+--------------------
+=== TC5: Playlist Advanced Operations ===
+P1 Total Score: 12
+P2 Total Score: 12
+P1 >= P2 (for first 2 songs)? Yes
