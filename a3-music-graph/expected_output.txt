@@ -1,0 +1,89 @@
+============================================================
+TEST CASE 1: BFS - Recommend related songs
+============================================================
+
+[1] SUGGEST RELATED SONGS FOR: [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+-------------------------------------------------
+-> [S02] Muon Roi Ma Sao Con - Son Tung M-TP
+-> [S05] Waiting For You - MONO
+-> [S04] Thuy Trieu - Quang Hung MasterD
+-> [S03] Don't Coi - RPT Orijinn
+
+--- Test BFS from isolated node S06 ---
+
+[1] SUGGEST RELATED SONGS FOR: [S06] Co Don Tren Sofa - Ho Ngoc Ha
+-------------------------------------------------
+
+--- Test BFS from non-existent node ---
+
+============================================================
+TEST CASE 2: Connected Components - Create playlist by clusters
+============================================================
+
+[2] CREATE PLAYLIST BY CLUSTERS (CONNECTED COMPONENTS)
+-------------------------------------------------
+=== Playlist 1 ===
+  * [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+  * [S02] Muon Roi Ma Sao Con - Son Tung M-TP
+  * [S05] Waiting For You - MONO
+  * [S04] Thuy Trieu - Quang Hung MasterD
+  * [S03] Don't Coi - RPT Orijinn
+=== Playlist 2 ===
+  * [S06] Co Don Tren Sofa - Ho Ngoc Ha
+
+============================================================
+TEST CASE 3: Dijkstra - Smoothest transition
+============================================================
+
+[3] SMOOTHEST TRANSITION (DIJKSTRA)
+From: [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+To: [S03] Don't Coi - RPT Orijinn
+-------------------------------------------------
+-> Total Deviation (Cost): 5.5
+-> Playback Order:
+   1. [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+   2. [S05] Waiting For You - MONO
+   3. [S04] Thuy Trieu - Quang Hung MasterD
+   4. [S03] Don't Coi - RPT Orijinn
+
+--- Test Dijkstra to isolated node ---
+
+[3] SMOOTHEST TRANSITION (DIJKSTRA)
+From: [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+To: [S06] Co Don Tren Sofa - Ho Ngoc Ha
+-------------------------------------------------
+No transition path between these two songs.
+
+============================================================
+TEST CASE 4: In-degree - Find network hub song
+============================================================
+
+[4] FIND NETWORK HUB SONG (IN-DEGREE)
+-------------------------------------------------
+-> Network Hub Song:
+   [S04] Thuy Trieu - Quang Hung MasterD
+   (In-degree: 3)
+
+============================================================
+TEST CASE 5: DFS Cycle Detection - Detect music loop
+============================================================
+
+[5] DETECT MUSIC LOOP (DFS CYCLE DETECTION)
+-------------------------------------------------
+-> Music loop detected!
+-> Loop:
+   [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+   [S02] Muon Roi Ma Sao Con - Son Tung M-TP
+   [S01] Chung Ta Cua Tuong Lai - Son Tung M-TP
+
+============================================================
+TEST CASE 6: DAG - Graph with no cycle
+============================================================
+
+[5] DETECT MUSIC LOOP (DFS CYCLE DETECTION)
+-------------------------------------------------
+No music loop detected.
+
+============================================================
+ALL TEST CASES COMPLETED
+============================================================
